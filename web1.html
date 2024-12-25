@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Yan!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 3em;
+            animation: fadeIn 3s;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #ff8a75;
+        }
+        .quote {
+            font-size: 22px;
+            color: #555;
+            margin-top: 30px;
+            font-style: italic;
+            max-width: 400px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome, Yan!</h1>
+    <p>Take a moment to relax and enjoy some peaceful vibes.</p>
+    <button class="button" onclick="showMotivationalQuote()">Click for a Positive Quote!</button>
+
+    <div class="quote" id="quoteDisplay"></div>
+
+    <script>
+        const quotes = [
+            "You are doing great. Keep going!",
+            "Believe in yourself and all that you are.",
+            "Take a deep breath and relax. Everything will be okay.",
+            "You are worthy of love, happiness, and all good things.",
+            "Every day is a new chance to start again."
+        ];
+
+        function showMotivationalQuote() {
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("quoteDisplay").innerText = `"${randomQuote}"`;
+        }
+    </script>
+</body>
+</html>
